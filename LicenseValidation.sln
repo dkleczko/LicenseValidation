@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LicenseValidation.Exceptions", "LicenseValidation.Exceptions\LicenseValidation.Exceptions.csproj", "{B0D52868-E3AA-437D-BDAB-495D5D2CA730}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LicenseValidation.Business", "LicenseValidation.Business\LicenseValidation.Business.csproj", "{CBA52691-7274-4DEE-892F-BC391F536064}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lambda", "Lambda", "{B8B21467-1BAC-42A4-89ED-2EFA0F68A057}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LicenseValidation.VerifyLicense", "Lambda\LicenseValidation.VerifyLicense\LicenseValidation.VerifyLicense.csproj", "{3BA33612-D370-420E-BBBA-5A844C0CED41}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LicenseValidation.Shared", "LicenseValidation.Shared\LicenseValidation.Shared.csproj", "{C6019B09-D600-4B49-9B24-B82E45357130}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LicenseValidation.GetLicenses", "Lambda\LicenseValidation.GetLicenses\LicenseValidation.GetLicenses.csproj", "{B0642EFF-E076-4C21-BFC9-970AF757E9DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AE851315-AED9-4C11-A57C-1A4F5BD5B280}"
+	ProjectSection(SolutionItems) = preProject
+		apps.json = apps.json
+		configuration.yaml = configuration.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0D52868-E3AA-437D-BDAB-495D5D2CA730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0D52868-E3AA-437D-BDAB-495D5D2CA730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0D52868-E3AA-437D-BDAB-495D5D2CA730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0D52868-E3AA-437D-BDAB-495D5D2CA730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBA52691-7274-4DEE-892F-BC391F536064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBA52691-7274-4DEE-892F-BC391F536064}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBA52691-7274-4DEE-892F-BC391F536064}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBA52691-7274-4DEE-892F-BC391F536064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BA33612-D370-420E-BBBA-5A844C0CED41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BA33612-D370-420E-BBBA-5A844C0CED41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BA33612-D370-420E-BBBA-5A844C0CED41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BA33612-D370-420E-BBBA-5A844C0CED41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6019B09-D600-4B49-9B24-B82E45357130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6019B09-D600-4B49-9B24-B82E45357130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6019B09-D600-4B49-9B24-B82E45357130}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6019B09-D600-4B49-9B24-B82E45357130}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0642EFF-E076-4C21-BFC9-970AF757E9DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0642EFF-E076-4C21-BFC9-970AF757E9DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0642EFF-E076-4C21-BFC9-970AF757E9DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0642EFF-E076-4C21-BFC9-970AF757E9DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3BA33612-D370-420E-BBBA-5A844C0CED41} = {B8B21467-1BAC-42A4-89ED-2EFA0F68A057}
+		{B0642EFF-E076-4C21-BFC9-970AF757E9DE} = {B8B21467-1BAC-42A4-89ED-2EFA0F68A057}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AFF5E671-74B7-44C8-B5F5-2CE72A5077BE}
+	EndGlobalSection
+EndGlobal

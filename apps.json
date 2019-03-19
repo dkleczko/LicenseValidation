@@ -1,0 +1,20 @@
+[
+	{
+		"Id" : "id1",
+		"Name" : "Application 1",
+		"TrialDays" : 30,
+		"Token" : "Token1"
+	},
+	{
+		"Id" : "id2",
+		"Name" : "Application 2",
+		"TrialDays" : 0,
+		"Token" : "Token2"
+	},
+	{
+		"Id" : "id3",
+		"Name" : "Application 3",
+		"TrialDays" : 13,
+		"Token" : "Token3"
+	}
+]

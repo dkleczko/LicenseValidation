@@ -1,0 +1,75 @@
+AWSTemplateFormatVersion:  '2010-09-09'
+Description:  'LicenseValidation  create  stack'
+Resources:
+  LicenceTableForValidation:
+    Type:  AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+        -
+          AttributeName:  'MachineKey'
+          AttributeType:  'S'
+        -
+          AttributeName:  'ApplicationId'
+          AttributeType:  'S'
+      BillingMode:  'PAY_PER_REQUEST'
+      KeySchema:
+        -
+          AttributeName:  'MachineKey'
+          KeyType:  'HASH'
+      GlobalSecondaryIndexes:
+        -
+          IndexName:  'ApplicationId-index'
+          KeySchema:
+            -
+              AttributeName:  'ApplicationId'
+              KeyType:  'HASH'
+          Projection:
+            ProjectionType:  'ALL'
+      TableName:  'LicenceTableForValidation'
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: licensevalidationbucket
+  LicenseVerifyRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: LicenseVerifyRole
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          -
+            Effect: 'Allow'
+            Principal:
+              Service:
+                - 'lambda.amazonaws.com'
+            Action:
+              - 'sts:AssumeRole'
+      ManagedPolicyArns:
+         - 'arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess'
+         - 'arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess'
+  LicenseVerifyPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: LicenseVerifyPolicy
+      PolicyDocument:
+        Statement:
+          - Effect: Allow
+            Action: ['logs:CreateLogGroup', 'logs:CreateLogStream', 'logs:PutLogEvents']
+            Resource: arn:aws:logs:*:*:*
+      Roles:
+        - Ref: 'LicenseVerifyRole'
+  XRayPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: XRayPolicy
+      PolicyDocument:
+        Statement:
+          - Effect: Allow
+            Action: ['xray:PutTraceSegments', 'xray:PutTelemetryRecords']
+            Resource: '*'
+      Roles:
+        - Ref: 'LicenseVerifyRole'
+         
+
+        
+

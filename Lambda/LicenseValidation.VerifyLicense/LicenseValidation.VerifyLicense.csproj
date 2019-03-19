@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <AWSProjectType>Lambda</AWSProjectType>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Amazon.Lambda.Core" Version="1.1.0" />
+    <PackageReference Include="Amazon.Lambda.Serialization.Json" Version="1.4.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\LicenseValidation.Business\LicenseValidation.Business.csproj" />
+    <ProjectReference Include="..\..\LicenseValidation.Exceptions\LicenseValidation.Exceptions.csproj" />
+    <ProjectReference Include="..\..\LicenseValidation.Shared\LicenseValidation.Shared.csproj" />
+  </ItemGroup>
+</Project>
